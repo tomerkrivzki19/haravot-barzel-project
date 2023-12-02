@@ -1,0 +1,169 @@
+body {
+  /* background-color: aqua; */
+  padding: 0;
+  margin: 0;
+  /* align-items: center;
+  text-align: center; */
+}
+
+/* isarli flag decoration */
+
+.flag-contaienr {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+  flex-direction: column;
+}
+
+.flag {
+  font-size: 99px;
+  line-height: 160px;
+  width: 220px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: black;
+  padding: 0;
+  margin: 0;
+}
+
+.israel-flag {
+  width: 100%;
+  padding-bottom: 72.727%;
+  background-color: white;
+  position: relative;
+  margin: 0;
+}
+
+.israel-flag::before,
+.israel-flag::after {
+  content: "  ";
+  position: absolute;
+  background-color: blue;
+  width: 100%;
+  right: 0px;
+  height: 15.625%;
+}
+
+.israel-flag::before {
+  top: 9.375%;
+}
+.israel-flag::after {
+  bottom: 9.375%;
+}
+
+.israel-flag .israel-star {
+  position: absolute;
+  color: blue;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+
+.flag-contaienr h2 {
+  direction: rtl;
+}
+
+/*  war names container */
+.war-names-project {
+  background-color: aqua;
+
+  align-items: center;
+  text-align: center;
+  height: 103vh;
+}
+.war-names-project .war-names-container {
+  padding: 15em 0;
+}
+
+.war-names-project .war-names-container .war-names-contaier {
+  display: flex;
+  justify-content: space-around;
+  padding: 15px 40%;
+  font-family: Courier, monospace;
+  font-size: 20px;
+  font-weight: 500;
+  color: red;
+}
+.war-names-project .war-names-container h4 {
+  padding: 1em 0;
+}
+
+/* button calss */
+.button-74 {
+  background-color: #fbeee0;
+  border: 2px solid #422800;
+  border-radius: 30px;
+  box-shadow: #422800 4px 4px 0 0;
+  color: #422800;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 18px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-74:hover {
+  background-color: #fff;
+}
+
+.button-74:active {
+  box-shadow: #422800 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  .button-74 {
+    min-width: 120px;
+    padding: 0 25px;
+  }
+}
+
+/*names-on-shells-project  */
+.names-on-shells-project {
+  background-color: #f0f0f0;
+  padding: 1em 0;
+  align-items: center;
+  text-align: center;
+  height: 170vh;
+  max-width: 100%;
+}
+.names-on-shells-project .images-box {
+  flex-wrap: wrap;
+  max-width: 100%;
+  /* padding: 0em 22em; */
+}
+.names-on-shells-project .images-box img {
+  width: 280px;
+  height: 450px;
+}
+
+.last-image {
+  width: 40%;
+  height: 40%;
+}
+.footer {
+  display: flex;
+  justify-content: center;
+  direction: rtl;
+  padding-bottom: 1.5em;
+}
+.footer img {
+  padding: 1em 2em;
+  height: 87px;
+}
+.footer h4 {
+  padding: 1.5em 0;
+}
+
+/* timer css */
+
+@import "timer.css";
