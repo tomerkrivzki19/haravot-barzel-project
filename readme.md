@@ -8,6 +8,6 @@ Instructions:
 
 1. cd client
 2. npm i
-3. on the client directory pree no start to start the project and run it locally
+3. on the client directory prees npm start to start the project and run it locally
 
 hope you enjoy 🙂
