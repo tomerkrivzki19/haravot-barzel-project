@@ -8,7 +8,9 @@ import six from "./assets/6.jpg";
 import seven from "./assets/7.jpg";
 import eight from "./assets/8.jpg";
 import nine from "./assets/9.jpg";
+
 import LetThemBackTimer from "./timer/LetThemBackTimer";
+
 function App() {
   const [firstNames, setFirstNames] = useState([
     "חרבות",
@@ -26,6 +28,18 @@ function App() {
 
   return (
     <>
+      <div className="spotify">
+        <iframe
+          // style="border-radius:12px"
+          src="https://open.spotify.com/embed/playlist/37i9dQZF1DZ06evO1OWc6I?utm_source=generator&theme=0"
+          width="25%"
+          height="352"
+          // frameBorder="0"
+          allowfullscreen=""
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy"
+        ></iframe>
+      </div>
       {/* isarli flag decoration */}
       <div className="flag-contaienr">
         <div class="flag">
@@ -51,7 +65,7 @@ function App() {
             }}
             className="button-74"
           >
-            Randomaize Name
+            לחצ/י
           </button>
           <h4>
             הפרוייקט הוקם עקב רעיונות שצצו לי בזמן הליחמה בחזית הצפונית ,חלק
@@ -65,23 +79,25 @@ function App() {
         <h2>הקדשות שמות על פגזים</h2>
 
         <div className="images-box">
-          <img src={one} alt="" />
+          {/* <img src={one} alt="" /> */}
           <img src={two} alt="" />
-          <img src={three} alt="" />
+          <img src={eight} alt="" />
+
+          {/* <img src={three} alt="" /> */}
           <img src={four} alt="" />
           <img src={five} alt="" />
           <img src={six} alt="" />
-          <img src={seven} alt="" />
+          {/* <img src={seven} alt="" /> */}
           <img src={eight} alt="" />
         </div>
-        <a href="mailto:admin@bdika.com">
-          {" "}
-          <h3> ✉️ מוזמנים לשלוח מייל עם ההקדשה</h3>
-        </a>
         <h4>
           הפרוייקט הוקם עקב רעיונות שצצו לי בזמן הליחמה בחזית הצפונית ,חלק
           מהרעיונות הגיעו מאנשי הצוות
         </h4>
+        <a href="mailto:admin@bdika.com">
+          {" "}
+          <h3> ✉️ מוזמנים לשלוח מייל עם ההקדשה</h3>
+        </a>
         <img className="last-image" src={nine} alt="" />
         <div className="footer">
           <h4 className="image-lorem">

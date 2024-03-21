@@ -2,19 +2,31 @@ body {
   /* background-color: aqua; */
   padding: 0;
   margin: 0;
+
   /* align-items: center;
   text-align: center; */
 }
+html {
+  font-family: "Knewave", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
 
 /* isarli flag decoration */
-
+.spotify iframe {
+  position: fixed;
+}
 .flag-contaienr {
   margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #f0f0f0;
+  /* background-color: #f0f0f0; */
+  background-image: url("../assets/Or_shenk_photography-40.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   flex-direction: column;
 }
 
@@ -139,13 +151,50 @@ body {
 .names-on-shells-project .images-box {
   flex-wrap: wrap;
   max-width: 100%;
-  /* padding: 0em 22em; */
+  padding: 0 20em;
 }
 .names-on-shells-project .images-box img {
   width: 280px;
   height: 450px;
 }
+.images-box {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: auto 0 auto;
+  place-items: center;
+}
+.images-box > img {
+  width: 200px; /* control the size */
+  aspect-ratio: 1;
+  object-fit: cover;
+  transition: 0.35s;
+  filter: grayscale();
+  cursor: pointer;
+}
+.images-box > img:hover {
+  filter: grayscale(0%);
+}
 
+.images-box > img:nth-child(1) {
+  clip-path: polygon(0 0, 50% 0, 100% 100%, 0 100%);
+}
+.images-box > img:nth-child(2) {
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+.images-box > img:nth-child(3) {
+  clip-path: polygon(50% 0, 100% 0, 100% 100%, 0 100%);
+}
+.images-box > img:nth-child(4) {
+  clip-path: polygon(0 0, 100% 0, 50% 100%, 0 100%);
+}
+.images-box > img:nth-child(5) {
+  clip-path: polygon(50% 0, 100% 100%, 0% 100%);
+}
+.images-box > img:nth-child(6) {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%);
+}
+
+/* -------------------- */
 .last-image {
   width: 40%;
   height: 40%;
@@ -162,6 +211,23 @@ body {
 }
 .footer h4 {
   padding: 1.5em 0;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    overflow-x: hidden;
+  }
+  .spotify iframe {
+    width: 50%;
+    z-index: 100;
+  }
+  .names-on-shells-project .images-box {
+    padding: 0em;
+  }
+  .last-image {
+    width: 100%;
+    height: 40%;
+  }
 }
 
 /* timer css */
