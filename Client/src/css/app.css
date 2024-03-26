@@ -12,9 +12,11 @@ html {
   font-style: normal;
 }
 
-/* isarli flag decoration */
+/* isareli flag decoration */
+
 .spotify iframe {
   position: fixed;
+  z-index: 90;
 }
 .flag-contaienr {
   margin: 0;
@@ -233,3 +235,7 @@ html {
 /* timer css */
 
 @import "timer.css";
+
+/* shavzk css */
+
+@import "shavzak.css";

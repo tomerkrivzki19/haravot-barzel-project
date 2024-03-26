@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import one from "./assets/1.jpg";
 import two from "./assets/2.jpg";
 import three from "./assets/3.jpg";
@@ -10,6 +10,7 @@ import eight from "./assets/8.jpg";
 import nine from "./assets/9.jpg";
 
 import LetThemBackTimer from "./timer/LetThemBackTimer";
+import Shavzak from "./components/Shavzak";
 
 function App() {
   const [firstNames, setFirstNames] = useState([
@@ -19,26 +20,44 @@ function App() {
     "שבבי",
   ]);
   const [lastNames, setLastNames] = useState(["ברזל", "חץ", "פטישים", "יין"]);
+  const [showSpotigy, setShowSpotigy] = useState(true);
 
   const [state, setState] = useState(0);
   let randomaizeNames = (name) => {
     const random = Math.floor(Math.random() * name.length);
     return name[random];
   };
-
+  useEffect(() => {
+    setTimeout(() => {
+      if (
+        confirm("Are you sure you want to save this thing into the database?")
+      ) {
+        // Save it!
+        setShowSpotigy(false);
+      } else {
+        setShowSpotigy(true);
+      }
+    }, 1000);
+  }, []);
   return (
     <>
       <div className="spotify">
-        <iframe
-          // style="border-radius:12px"
-          src="https://open.spotify.com/embed/playlist/37i9dQZF1DZ06evO1OWc6I?utm_source=generator&theme=0"
-          width="25%"
-          height="352"
-          // frameBorder="0"
-          allowfullscreen=""
-          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-          loading="lazy"
-        ></iframe>
+        {showSpotigy === false ? (
+          <div className=""></div>
+        ) : (
+          <>
+            <iframe
+              // style="border-radius:12px"
+              src="https://open.spotify.com/embed/playlist/37i9dQZF1DZ06evO1OWc6I?utm_source=generator&theme=0"
+              width="25%"
+              height="352"
+              // frameBorder="0"
+              allowfullscreen=""
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+            ></iframe>
+          </>
+        )}
       </div>
       {/* isarli flag decoration */}
       <div className="flag-contaienr">
@@ -125,6 +144,7 @@ function App() {
           </h1>
           <LetThemBackTimer />
         </div>
+        <Shavzak />
       </div>
     </>
   );
