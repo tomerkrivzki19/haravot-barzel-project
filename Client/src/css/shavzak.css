@@ -1,13 +1,18 @@
 .gurdlist {
-  /* background-color: ; */
+  /* background-color: blue; */
+  max-width: 100%;
+  width: 100%;
   text-align: center;
   align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: 100%;
-  padding: 15em;
+  text-align: center;
+  align-items: center;
+
+  overflow-x: auto;
 }
+
 .gurdlist button {
   margin-top: 3em;
 }
@@ -17,14 +22,10 @@ th {
   border: 1px solid #ddd;
   text-align: left;
 }
-table,
-td,
-tr {
-}
+
 table {
-  overflow-x: scroll importent!;
   border-collapse: collapse;
-  max-width: 80%;
+  max-width: 100%;
 }
 
 th,
@@ -77,9 +78,18 @@ td {
   transform: translate(2px, 2px);
 }
 
+/* @media (max-width: 1260px) {
+  .small-sizes {
+    display: flex;
+    flex-direction: column;
+  }
+} */
 @media (min-width: 768px) {
   .button-50 {
     padding: 12px 50px;
+  }
+  .message {
+    padding-left: 0em;
   }
 }
 
@@ -89,6 +99,7 @@ td {
 .message {
   width: 100%;
   text-align: start;
+  padding-left: 15em;
 }
 .line-threw {
   text-decoration: underline;

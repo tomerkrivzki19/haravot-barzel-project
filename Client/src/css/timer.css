@@ -1,40 +1,26 @@
+/* notes: */
+/* gliching on <= 481px */
+/* <= 1466 */
+/* <= 550 */
+
+.let-them-back-container {
+  max-width: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+}
 .let-them-back-timer {
-  color: wheat;
-  background-color: #000000a0;
   position: fixed;
   width: 30%;
   right: 5%;
   bottom: 5%;
-
-  padding: 6px 8px;
-  text-align: center;
-  font-size: 12px;
-  text-decoration: none;
-  font-family: "Open Sans", Arial, Helvetica, sans-serif;
-  border-radius: 11px;
-  border: 0.794px solid #867f8a;
-  font-weight: 400;
+  color: wheat;
+  background-color: #000000a0;
 }
 .let-them-back-timer h1 {
   justify-content: center;
   display: flex;
-}
-.let-them-back-timer {
-  color: wheat;
-  background-color: #000000a0;
-  position: fixed;
-  width: 30%;
-  right: 5%;
-  bottom: 5%;
-
-  padding: 6px 8px;
-  text-align: center;
-  font-size: 12px;
-  text-decoration: none;
-  font-family: "Open Sans", Arial, Helvetica, sans-serif;
-  border-radius: 11px;
-  border: 0.794px solid #867f8a;
-  font-weight: 400;
 }
 
 .app {

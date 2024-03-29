@@ -13,7 +13,44 @@ html {
 }
 
 /* isareli flag decoration */
+.spotify {
+  width: 28%;
+  height: 352px;
+  position: fixed;
+  display: flex;
+}
 
+/* close tag */
+.close {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 32px;
+  height: 32px;
+  opacity: 0.3;
+  z-index: 100;
+}
+.close:hover {
+  opacity: 1;
+}
+.close:before,
+.close:after {
+  position: absolute;
+  left: 15px;
+  content: " ";
+  height: 33px;
+  width: 2px;
+  /* background-color: #333; */
+  background-color: #ffc0cb;
+}
+.close:before {
+  transform: rotate(45deg);
+}
+.close:after {
+  transform: rotate(-45deg);
+}
+
+/*  */
 .spotify iframe {
   position: fixed;
   z-index: 90;
@@ -150,12 +187,19 @@ html {
   height: 170vh;
   max-width: 100%;
 }
-.names-on-shells-project .images-box {
+
+.names-on-shells-project .images-box-container {
+  display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   max-width: 100%;
-  padding: 0 20em;
+  width: 100%;
 }
-.names-on-shells-project .images-box img {
+.names-on-shells-project .images-box-container .images-box {
+  max-width: 40%;
+  /* padding: 0 20em; */
+}
+.names-on-shells-project .images-box-container .images-box img {
   width: 280px;
   height: 450px;
 }
@@ -214,15 +258,21 @@ html {
 .footer h4 {
   padding: 1.5em 0;
 }
-
-@media only screen and (max-width: 600px) {
-  body {
+@media only screen and (max-width: 990px) {
+  .names-on-shells-project .images-box-container .images-box {
+    max-width: 100%;
     overflow-x: hidden;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .spotify {
+    display: none;
   }
   .spotify iframe {
     width: 50%;
     z-index: 100;
   }
+
   .names-on-shells-project .images-box {
     padding: 0em;
   }
